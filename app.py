@@ -1,5 +1,4 @@
 import os
-from decouple import config
 from flask import (
     Flask, request, abort
 )
