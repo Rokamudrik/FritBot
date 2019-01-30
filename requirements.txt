@@ -4,7 +4,6 @@ python-decouple
 kbbi
 nltk
 sklearn
-warnings
 random
 string
 time
