@@ -113,7 +113,7 @@ def handle_text_message(event):
             balas("Perintahnya salah!")
 
     else:
-        pass
+        balas(textlul)
 
 
 if __name__ == "__main__":
