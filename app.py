@@ -6,7 +6,6 @@ from kbbi import KBBI
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import nltk
-import warnings
 import random
 import string
 import time
@@ -68,8 +67,8 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_text_message(event):
-    user_input=event.message.text.lower().split()
-
+    textlul=event.message.text
+    user_input=textlul.lower().split()
     def balas(pesan):
         Fritbot.reply_message(
             event.reply_token,
