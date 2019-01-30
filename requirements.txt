@@ -1,3 +1,11 @@
 flask
 line-bot-sdk
 python-decouple
+kbbi
+nltk
+sklearn
+warnings
+random
+string
+time
+_thread
