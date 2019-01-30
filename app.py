@@ -80,7 +80,7 @@ def handle_text_message(event):
             timer-=1
         balas('Hey, ini udah {} {}.\n Sudah waktunya untuk {}'.format(angka, waktu, acara))       
 
-    if '/' in user_input:
+    if '/' in textlul:
         if user_input[0]=='/reminder':
             #/reminder (aktivitasmu) dalam (waktu) (menit atau jam)
             try:
