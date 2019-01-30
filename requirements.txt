@@ -4,7 +4,4 @@ python-decouple
 kbbi
 nltk
 sklearn
-random
-string
-time
 
