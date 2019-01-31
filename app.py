@@ -109,7 +109,7 @@ def handle_text_message(event):
         if(req_tfidf==0): #Jika gaada yg mirip maka responnya gini
             frit_response+="{}".format(random.choice(Confused_responses))
             balas(frit_response)
-        elif req_tfidf<=0.5:
+        elif req_tfidf<=0.3:
             balas('Maaf, bisa tolong lebih diperdetil pertanyaannya?')
         else:
             frit_response += sent_tokens[idx]
