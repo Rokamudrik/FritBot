@@ -168,7 +168,7 @@ def handle_text_message(event):
     else:
         if 'bye' in str_input:
             balas('Bye! sampai nanti.')
-        elif !('terima kasih' or 'terimakasih' or 'thanks' or 'thankyou' in str_input):
+        elif ('terima kasih' or 'terimakasih' or 'thanks' or 'thankyou' in str_input)==False:
             balas('Sama sama...')
         elif len(str_input)<=1:
             balas(random.choice(Confused_responses))
