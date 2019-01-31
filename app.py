@@ -83,7 +83,7 @@ def handle_text_message(event):
 
         frit_response=''
         sent_tokens.append(msg) #Ini ngeappend input user ke list yang dibuat dari chatbot.txt
-        if 'apa itu fasilkom' in msg or 'fasilkom adalah' in msg or 'fasilkom' in msg:
+        if 'apa itu fasilkom' in msg or 'fasilkom adalah' in msg:
             frit_response = frit_response+sent_tokens[0]
             balas(frit_response)
         elif 'paralel untuk d3' in msg or 'ekstensi' in msg:
@@ -173,7 +173,7 @@ def handle_text_message(event):
     else:
         if 'bye' in str_input:
             balas('Bye! sampai nanti.')
-        elif ('terima kasih' or 'terimakasih' or 'thanks' or 'thankyou' in str_input)==False:
+        elif str_input in ['terima kasih', 'terimakasih','thanks','thankyou']:
             balas('Sama sama...')
         elif len(str_input)<=1:
             balas(random.choice(Confused_responses))
