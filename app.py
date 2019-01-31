@@ -166,7 +166,7 @@ def handle_text_message(event):
             balas("Perintahnya salah!")
 
     else:
-        if 'bye' or 'dadah' in str_input:
+        if 'bye' in str_input:
             balas('Bye! sampai nanti.')
         elif 'terima kasih' or 'terimakasih' or 'thanks' or 'thankyou' in str_input:
             balas('Sama sama...')
