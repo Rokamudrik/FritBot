@@ -82,11 +82,11 @@ def handle_text_message(event):
             return [token for token in nltk.word_tokenize(text.lower().translate(remove_punct_dict))]
 
         frit_response=''
-        sent_tokens.append(user_response) #Ini ngeappend input user ke list yang dibuat dari chatbot.txt
-        if 'apa itu fasilkom' in user_response or 'fasilkom adalah' in user_response or 'fasilkom' in user_response:
+        sent_tokens.append(msg) #Ini ngeappend input user ke list yang dibuat dari chatbot.txt
+        if 'apa itu fasilkom' in msg or 'fasilkom adalah' in msg or 'fasilkom' in msg:
             frit_response = frit_response+sent_tokens[0]
             balas(frit_response)
-        elif 'paralel untuk d3' in user_response or 'ekstensi' in user_response:
+        elif 'paralel untuk d3' in msg or 'ekstensi' in msg:
             frit_response = frit_response+sent_tokens[8]
             balas(frit_response)
 
@@ -152,14 +152,19 @@ def handle_text_message(event):
             _thread.start_new_thread(reminder,(' '.join(acara), angka, waktu,timer)) #ini module biar timernya jalan terpisah sama program
 
         elif lst_input[0]=='/makna':
-            kata=KBBI(' '.join(lst_input[1:]))
-            balas(kata)
+            kata = KBBI(' '.join(lst_input[1:]))
+            temp=kata.arti
+            for i in range(len(temp)):
+                temp[i] += '\n'
+            balas(''.join(temp))
+
         elif lst_input[0]=='/contoh':
-            kata=KBBI(' '.join(lst_input[1:]))
-            temp=kata.arti_contoh
+            kata = KBBI(' '.join(lst_input[1:]))
+            temp = kata.arti_contoh
             for i in range(len(temp)):
                 temp[i]+='\n'
             balas(''.join(temp))
+
         elif lst_input[0]=='/help':
             balas(about_txt)
         else:
